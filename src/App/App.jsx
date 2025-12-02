@@ -1,18 +1,24 @@
 import { Route, Routes } from "react-router-dom"
+import { Login } from "../auth/Login"
+import { ApplicationViews } from "../views/ApplicationViews"
+import { Authorized} from "../views/Authorized"
+import { Register } from "../auth/Register"
 
 
 
 export const App = () => {
 
-  return (
+    return (
 
-  
-  <Routes>
-    <Route path="/login" element={<h2>Here is a Login Page</h2>} />
-    <Route path="/register" element={<h2>Here is a Register Page</h2>} />
-    <Route path="*" element={
-      <h2>Hello World</h2>
-    } />
-  </Routes>
-  )
+
+        <Routes>
+            <Route path="/login" element={< Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="*" element={
+                <Authorized>
+                    <ApplicationViews />
+                </Authorized>
+            } />
+        </Routes>
+    )
 }
