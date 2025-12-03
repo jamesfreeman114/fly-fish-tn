@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
-import { Routes, Route} from "react-router-dom"
+import { Outlet, Routes, Route} from "react-router-dom"
+import { NavBar } from "../nav/NavBar"
 
 export const ApplicationViews = () => {
 
@@ -14,9 +15,20 @@ export const ApplicationViews = () => {
 
     return (
 
-        <Routes>
-            <Route path = "/" element = {<h2>Hello {currentUser.name}!</h2>}/>
+        <Routes>        
+            <Route
+                 path="/"
+                 element={
+                    <>
+                        <NavBar/>
+                        <Outlet/>
+                    </>
+                 }   
+                >
 
+            
+                <Route index element = {<h2>Hello {currentUser.name}!</h2>}/>         
+            </Route>
         </Routes>
         
     )

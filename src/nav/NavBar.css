@@ -1,0 +1,36 @@
+  body, html {
+    margin: 0;
+    padding: 0
+
+  }
+  
+  .navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgb(81, 78, 78);
+    margin: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .navbar-item {
+    flex-basis: 20%;
+    list-style-type: none;
+    text-align: left;
+    color: whitesmoke;
+  }
+
+  .navbar-link {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .navbar-logout {
+    margin-left: auto;
+  }
+
+  .navbar-link:hover {
+    color: var(--primary);
+  }
