@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Outlet, Routes, Route} from "react-router-dom"
 import { NavBar } from "../nav/NavBar"
+import { AllReports } from "../reports/AllReports"
 
 export const ApplicationViews = () => {
 
@@ -27,7 +28,7 @@ export const ApplicationViews = () => {
                 >
 
             
-                <Route index element = {<h2>Hello {currentUser.name}!</h2>}/>         
+                <Route index element = {<AllReports/>}/>         
             </Route>
         </Routes>
         
