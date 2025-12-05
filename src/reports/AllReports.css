@@ -128,24 +128,29 @@ body {
 }
 
 .report-subtitle {
+  display: flex;
   margin: 5px;
   text-decoration: none;
 }
 
 .report-details {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
   background-image: radial-gradient(circle, #e5e6ea, #a09af6);
   color: rgb(3, 3, 56);
   font-size: large;
   text-decoration: none;
   border-radius: 0.5rem;
   padding: 10px;
-  width: 1200px;
+  width: 90%;
   text-align: left;
   border: 1px solid;
   margin: 1rem; 
-  align-items: center;
+  /* align-items: center; */
   box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.3),
     2px 4px 20px hsla(0, 0%, 0%, 0.2);
+
 }
 
 .btn-primary {

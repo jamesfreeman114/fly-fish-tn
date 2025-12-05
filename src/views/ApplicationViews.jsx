@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { Outlet, Routes, Route} from "react-router-dom"
 import { NavBar } from "../nav/NavBar"
 import { AllReports } from "../reports/AllReports"
+import { ReportDetails } from "../reports/ReportDetails"
 
 export const ApplicationViews = () => {
 
@@ -28,7 +29,11 @@ export const ApplicationViews = () => {
                 >
 
             
-                <Route index element = {<AllReports/>}/>         
+                <Route  index element = {<AllReports/>}/>
+                    <Route  path="reports/:id" 
+                            element={<ReportDetails/>} 
+                            currentUser={currentUser}>
+                    </Route>         
             </Route>
         </Routes>
         
