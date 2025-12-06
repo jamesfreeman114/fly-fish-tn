@@ -41,7 +41,7 @@ export const Login = () => {
               <input
                 type="email"
                 value={email}
-                onChange={(event) => set(evt.target.value)}
+                onChange={(event) => set(event.target.value)}
                 className="form-control"
                 placeholder="Email address"
                 required
