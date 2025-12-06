@@ -3,6 +3,7 @@ import { Outlet, Routes, Route} from "react-router-dom"
 import { NavBar } from "../nav/NavBar"
 import { AllReports } from "../reports/AllReports"
 import { ReportDetails } from "../reports/ReportDetails"
+import { Profile } from "../users/Profile"
 
 export const ApplicationViews = () => {
 
@@ -31,8 +32,13 @@ export const ApplicationViews = () => {
             
                 <Route  index element = {<AllReports/>}/>
                     <Route  path="reports/:id" 
-                            element={<ReportDetails/>} 
-                            currentUser={currentUser}>
+                            element={<ReportDetails currentUser={currentUser}/>}>
+                            
+                    </Route>
+                    <Route  path="profile"
+                            element={<Profile currentUser={currentUser}/>}
+                            
+                    >
                     </Route>         
             </Route>
         </Routes>
