@@ -5,6 +5,7 @@ import { AllReports } from "../reports/AllReports"
 import { ReportDetails } from "../reports/ReportDetails"
 import { Profile } from "../users/Profile"
 import { NewReportForm } from "../forms/NewReportForm"
+import { EditReport } from "../reports/EditReport"
 
 export const ApplicationViews = () => {
 
@@ -43,6 +44,11 @@ export const ApplicationViews = () => {
                     </Route>
                     <Route  path="newreport"
                             element={<NewReportForm currentUser={currentUser}/>} />
+                    <Route
+                            path=":id/edit" element={<EditReport/>} 
+                    >
+
+                    </Route>
 
             </Route>
         </Routes>
