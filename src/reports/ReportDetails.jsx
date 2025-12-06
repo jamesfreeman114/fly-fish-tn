@@ -7,7 +7,7 @@ export const ReportDetails = ({currentUser}) => {
 
   
     const [report, setReport] = useState([])
-    const { id } = useParams()
+    const {id} = useParams()
 
     useEffect(()=>{
         getReportById(id).then((reportObj) => setReport(reportObj))

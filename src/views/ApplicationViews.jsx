@@ -4,6 +4,7 @@ import { NavBar } from "../nav/NavBar"
 import { AllReports } from "../reports/AllReports"
 import { ReportDetails } from "../reports/ReportDetails"
 import { Profile } from "../users/Profile"
+import { NewReportForm } from "../forms/NewReportForm"
 
 export const ApplicationViews = () => {
 
@@ -39,7 +40,10 @@ export const ApplicationViews = () => {
                             element={<Profile currentUser={currentUser}/>}
                             
                     >
-                    </Route>         
+                    </Route>
+                    <Route  path="newreport"
+                            element={<NewReportForm currentUser={currentUser}/>} />
+
             </Route>
         </Routes>
         
