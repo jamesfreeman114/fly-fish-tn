@@ -1,5 +1,6 @@
 import { getReportById } from "../services/reportService"
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import "./AllReports.css"
 import { useParams } from "react-router-dom"
 
@@ -8,6 +9,7 @@ export const ReportDetails = ({currentUser}) => {
   
     const [report, setReport] = useState([])
     const {id} = useParams()
+    const navigate = useNavigate()
 
     useEffect(()=>{
         getReportById(id).then((reportObj) => setReport(reportObj))
@@ -15,6 +17,8 @@ export const ReportDetails = ({currentUser}) => {
     },[])
 
     const handleLike = () => {console.log("Button clicked!")}
+
+    const handleEdit = () => {navigate(`../${report.id}/edit`)}
     
 
     return (
@@ -40,12 +44,21 @@ export const ReportDetails = ({currentUser}) => {
                 {report.likes}
             </div>
             <div className="btn-container">
-                <button className="form-btn btn-primary"
+                {report.userId != currentUser.id ?
+                    (<button className="form-btn btn-primary"
                         onClick={handleLike}>
-                Like
-                </button>
+                Like</button>) :( "")}
 
+            
+
+              {report.userId === currentUser.id ?
+                    (<button className="btn-container btn-primary"
+                        onClick={handleEdit}
+                    >Edit</button>) : (
+                        ""
+                    )}
             </div>
+
         </section>
     )
 

@@ -16,3 +16,13 @@ export const createReport = (newReport) => {
     body: JSON.stringify(newReport),
   }).then((res) => res.json())
 }
+
+export const editReport = (report) => {
+  return fetch(`http://localhost:8088/reports/${report.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(report) 
+  }).then((res) => res.json())
+}
