@@ -14,7 +14,9 @@ export const AllReports = () => {
     const [locations, setLocations] = useState([])
     const [locationId, setLocationId] = useState(0)
 
-    useEffect(() => { getAllReports().then((allReports) => setReports(allReports)) }, [])
+    const getAndSetReports = () => {getAllReports().then((allReports) => setReports(allReports)) }
+
+    useEffect(() => { getAndSetReports() }, [])
     useEffect(() => { getAllLocations().then((allLocations) => setLocations(allLocations)) }, [])
 
     useEffect(() => {

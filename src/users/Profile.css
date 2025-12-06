@@ -1,0 +1,6 @@
+
+.container {
+  margin: 100px;
+  padding: 50px;
+  background-image: radial-gradient(circle, #e5e6ea, #a09af6);
+}
