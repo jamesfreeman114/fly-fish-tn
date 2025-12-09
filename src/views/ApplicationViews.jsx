@@ -1,58 +1,68 @@
 import { useState, useEffect } from "react"
-import { Outlet, Routes, Route} from "react-router-dom"
+import { Outlet, Routes, Route } from "react-router-dom"
 import { NavBar } from "../nav/NavBar"
 import { AllReports } from "../reports/AllReports"
 import { ReportDetails } from "../reports/ReportDetails"
 import { Profile } from "../users/Profile"
 import { NewReportForm } from "../forms/NewReportForm"
 import { EditReport } from "../reports/EditReport"
+import { Favorites } from "../reports/Favorites"
 
 export const ApplicationViews = () => {
 
     const [currentUser, setCurrentUser] = useState({})
 
-    useEffect(()=>{
-    const localFlyUser = localStorage.getItem("fly_user")
-    const flyUserObject = JSON.parse(localFlyUser)
+    useEffect(() => {
+        const localFlyUser = localStorage.getItem("fly_user")
+        const flyUserObject = JSON.parse(localFlyUser)
 
-    setCurrentUser(flyUserObject)
-    },[])
+        setCurrentUser(flyUserObject)
+    }, [])
 
     return (
 
-        <Routes>        
+        <Routes>
             <Route
-                 path="/"
-                 element={
+                path="/"
+                element={
                     <>
-                        <NavBar/>
-                        <Outlet/>
+                        <NavBar />
+                        <Outlet />
                     </>
-                 }   
+                }
+            >
+
+
+                <Route index element={<AllReports />} />
+                <Route path="reports/:id"
+                    element={<ReportDetails currentUser={currentUser} />}>
+
+                </Route>
+                <Route path="profile"
+                    element={<Profile currentUser={currentUser} />}
+
                 >
+                </Route>
+                <Route path="newreport"
+                    element={<NewReportForm currentUser={currentUser} />} />
+                <Route
+                    path=":id/edit" element={<EditReport />}
+                />
+                <Route path="favorites"
+                    element={<Favorites currentUser={currentUser} />} />
 
-            
-                <Route  index element = {<AllReports/>}/>
-                    <Route  path="reports/:id" 
-                            element={<ReportDetails currentUser={currentUser}/>}>
-                            
-                    </Route>
-                    <Route  path="profile"
-                            element={<Profile currentUser={currentUser}/>}
-                            
-                    >
-                    </Route>
-                    <Route  path="newreport"
-                            element={<NewReportForm currentUser={currentUser}/>} />
-                    <Route
-                            path=":id/edit" element={<EditReport/>} 
-                    >
 
-                    </Route>
+
+
+
+
+
+
+
 
             </Route>
         </Routes>
-        
+
     )
 
 }
