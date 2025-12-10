@@ -3,7 +3,7 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Changed from center to flex-start */
+  align-items: flex-start; 
   width: 100%;
   min-height: 100vh;
   padding: 0px;
@@ -19,7 +19,7 @@ body {
 
 #root{
   font-family: 'Questrial', sans-serif;
-  width: 100%; /* Add this to prevent horizontal shifting */
+  width: 100%; 
 }
 
 .homepage {
@@ -29,30 +29,6 @@ body {
   width: 100%;
 }
 
-.search-controls {
-  width: 80%;
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-.search-bar {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  width: 100%; /* Changed from 600px to 100% to use parent width */
-}
-
-.search-input {
-  border-radius: 0.5rem;
-  border: 2px solid rgb(0, 0, 0);
-  flex-grow: 1;
-  margin: 1rem 0;
-  padding: 0.5rem;
-}
-
-.search-input:focus::placeholder {
-  color: transparent;
-}
 
 .report-dropdown {
     display: flex;
@@ -76,17 +52,15 @@ body {
   text-decoration: none;
   justify-content: flex-start;
   flex-wrap: wrap;
-  align-items: flex-start; /* Changed from center */
-  
+  align-items: flex-start; 
   width: 100%;
   height: 100%;
-  /* margin: 1 rem 0;
-  padding: 1 rem */
+
 }
 
 .all-reports a {
   text-decoration: none;
-  color: inherit; /* This ensures the link doesn't change the text color either */
+  color: inherit;
   width: 100%;
   display: flex
 }
@@ -147,7 +121,6 @@ body {
   text-align: left;
   border: 1px solid;
   margin: 1rem; 
-  /* align-items: center; */
   box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.3),
     2px 4px 20px hsla(0, 0%, 0%, 0.2);
 
@@ -182,74 +155,17 @@ body {
   background-image: radial-gradient(circle, #e5e6ea, #a09af6);
 }
 
-.my-reports-container {
-  margin: 100px;
-  padding: 50px;
-  background-image: radial-gradient(circle, #ffffff, #d1d1d6);
-}
-
-.my-report {
-  display: flex;
-  flex-direction: column;
-  background-image: radial-gradient(circle, #ffffff, #cecde1);
-  color: rgb(3, 3, 56);
-  text-decoration: none;
-  border-radius: 0.5rem;
-  padding: 10px;
-  width: 80%;
-  text-align: center;
-  border: 1px solid;
-  margin: 1rem; 
-  align-items: center;
-  box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.3),
-    2px 4px 20px hsla(0, 0%, 0%, 0.2);
-}
-
-
-
-
-.my-report-btn-primary {
-  font-family: 'Questrial', sans-serif;
-  margin: 10px;
-  padding: 10px;
-  width: 70px;
-  align-self: flex-end;
-  text-decoration: none;
-  border-radius: 0.5rem;
-
-}
-
-.my-report-btn-primary:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  background-color: #760000;
-  color: white;
-
-
-}
-
-.my-report-btn-primary:focus {
-  box-shadow: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.my-report-topic {
-  display: flex;
-  align-self: flex-start;
-  justify-content: center;
-  font-weight: bold;
-  font-size: large;
-  text-decoration: none;
-  margin: 5px;
-}
 
 
 .app-heading {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+
+  .app-title {
+    color: white;
+    font-size: 3rem;
+  }
 
   .app-heading-circle {
   background: white;
@@ -269,11 +185,5 @@ body {
     width: 10rem;
     filter: drop-shadow(1px 1px 11px var(--col-0));
   }
-}
-
-  /** Class for the text for the heading. It should be added to an h1 inside of the div with the .app-heading class*/
-  .app-heading-text {
-    font-size: 2.5rem;
-    margin-top: 1rem;
   }
 }

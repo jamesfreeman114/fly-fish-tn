@@ -1,4 +1,4 @@
-import { editReport, getReportById, likeReport, unlikeReport } from "../services/reportService"
+import { editReport, getReportById, likeReport, unlikeReport, deleteReport } from "../services/reportService"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import "./AllReports.css"
@@ -24,9 +24,15 @@ export const ReportDetails = ({ currentUser }) => {
 
     useEffect(()=> {
         getUserLikes(currentUserId).then((allLikes) => setLikes(allLikes))
-    })
+    },[])
 
-    const handleEdit = () => { navigate(`../${report.id}/edit`) }
+    const handleEdit = () => { navigate(`/reports/${report.id}/edit`) }
+
+    const handleDelete = (event) => {
+            event.preventDefault()
+
+            deleteReport(report.id).then(navigate(`/`))
+    }
 
     const handleLike = (event) => {
         event.preventDefault()
@@ -103,6 +109,13 @@ export const ReportDetails = ({ currentUser }) => {
                     (<button className="btn-container btn-primary"
                         onClick={handleEdit}
                     >Edit</button>) : (
+                        ""
+                    )}
+
+                {report.userId === currentUser.id ?
+                    (<button className="btn-container btn-primary"
+                        onClick={handleDelete}
+                    >Delete</button>) : (
                         ""
                     )}
 

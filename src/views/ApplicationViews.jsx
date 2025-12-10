@@ -5,7 +5,7 @@ import { AllReports } from "../reports/AllReports"
 import { ReportDetails } from "../reports/ReportDetails"
 import { Profile } from "../users/Profile"
 import { NewReportForm } from "../forms/NewReportForm"
-import { EditReport } from "../reports/EditReport"
+import { EditReport } from "../forms/EditReportForm.jsx"
 import { Favorites } from "../reports/Favorites"
 
 export const ApplicationViews = () => {
@@ -34,32 +34,20 @@ export const ApplicationViews = () => {
 
 
                 <Route index element={<AllReports />} />
-                <Route path="reports/:id"
-                    element={<ReportDetails currentUser={currentUser} />}>
-
+                <Route path="reports/:id">
+                    <Route index element={<ReportDetails currentUser={currentUser} />} />
+                    <Route path="edit" element={<EditReport currentUser={currentUser}/>} />
                 </Route>
+
                 <Route path="profile"
-                    element={<Profile currentUser={currentUser} />}
+                    element={<Profile currentUser={currentUser} />} />
 
-                >
-                </Route>
-                <Route path="newreport"
+                <Route path="new"
                     element={<NewReportForm currentUser={currentUser} />} />
-                <Route
-                    path=":id/edit" element={<EditReport />}
-                />
+
+
                 <Route path="favorites"
                     element={<Favorites currentUser={currentUser} />} />
-
-
-
-
-
-
-
-
-
-
             </Route>
         </Routes>
 
