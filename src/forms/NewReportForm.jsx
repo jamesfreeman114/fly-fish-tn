@@ -9,6 +9,7 @@ export const NewReportForm = ({ currentUser }) => {
 
     const navigate = useNavigate()
     const currentDate = new Date()
+    const formattedDate = new Intl.DateTimeFormat('en-US').format(currentDate)
     const userId = currentUser.id
 
     const [locations, setLocations] = useState([])
@@ -24,7 +25,7 @@ export const NewReportForm = ({ currentUser }) => {
             locationId: locationId,
             userId: userId,
             body: body,
-            date: currentDate,
+            date: formattedDate,
             likes: 0
         }
 
@@ -45,12 +46,12 @@ export const NewReportForm = ({ currentUser }) => {
 
 
     return (
-        <form className="container">
-            <h2>New Report Form</h2>
+        <form className="form-container">
+            <h2 className="form-heading">New Report Form</h2>
             <fieldset>
-                <div>
-                    <label>Title: </label>
-                    <input
+                <div className="form-group">
+                    <label className="label-input">Title: </label>
+                    <input className="form-control"
                             type = "text"
                             placeholder="Title"
                             onChange={(event) => setTitle(event.target.value)}
@@ -58,8 +59,8 @@ export const NewReportForm = ({ currentUser }) => {
                 </div>
             </fieldset>
             <fieldset>
-                <div>
-                    <label>Location: </label>
+                <div className="form-dropdown">
+                    <label className="label-input">Location: </label>
                     <select onChange={(event) => {
                         const selectedId = parseInt(event.target.value)
                         setLocationId(selectedId)
@@ -79,13 +80,13 @@ export const NewReportForm = ({ currentUser }) => {
                 </div>
             </fieldset>
             <fieldset>
-                <div>
-                    <label>Body: </label>
-                    <input
+                <div className="form-group">
+                    <label className="label-input">Body: </label>
+                    <textarea  className="form-body"
                             type = "text"
                             placeholder="Body"
                             onChange={(event) => setBody(event.target.value)}
-                    ></input>
+                    />
                 </div>
             </fieldset>
             <fieldset>

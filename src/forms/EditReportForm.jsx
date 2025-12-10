@@ -3,8 +3,10 @@ import { useNavigate, useParams } from "react-router-dom"
 import { getReportById } from "../services/reportService"
 import { getAllLocations } from "../services/locationService"
 import { editReport } from "../services/reportService"
+import "./Form.css"
 
-export const EditReport = () => {
+
+export const EditReport = ( {currentUser}) => {
 
     const [report, setReport] = useState({})
     const [locations, setLocations] = useState([])
@@ -43,13 +45,17 @@ export const EditReport = () => {
         getAllLocations().then((locArr) => setLocations(locArr))
     })
 
+    if ( currentUser.id === report.userId) {
+
     return (
-        <form className="container">
-            <h2>Edit Report</h2>
+
+     
+        <form className="form-container">
+            <h2 className="form-heading">Edit Report</h2>
             <fieldset>
-                <div>
-                    <label>Title: </label>
-                    <input
+                <div className="form-group">
+                    <label className="label-input">Title: </label>
+                    <input className="form-control"
                         type="text"
                         value={report?.title || ""}
                         onChange= {(event) => {
@@ -63,7 +69,7 @@ export const EditReport = () => {
             </fieldset>
             <fieldset>
                 <div className="form-dropdown">
-                <label>Location: </label>
+                <label className="label-input">Location: </label>
                 <select
                     value ={report?.locationId || ""}
                     onChange={(event)=> {
@@ -76,7 +82,7 @@ export const EditReport = () => {
                     {locations.map((location) => {
                         return (
                             <option
-                                className="post-option"
+                                className="report-option"
                                 key={location.id}
                                 value={location.id}
                                 
@@ -89,9 +95,9 @@ export const EditReport = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div>
-                    <label>Body: </label>
-                    <input
+                <div className = "form-group">
+                    <label className="label-input">Body: </label>
+                    <textarea className="form-body"
                         type="text"
                         value={report?.body || ""}
                         onChange= {(event) => {
@@ -100,7 +106,7 @@ export const EditReport = () => {
                             setReport(copy)
                         }}
 
-                    ></input>
+                    />
                 </div>
             </fieldset>
             <fieldset>
@@ -114,6 +120,12 @@ export const EditReport = () => {
             
 
         </form>
-    )
+        
+    )}
+
+    else {
+        navigate('/')
+    }
+    
 
 }

@@ -19,7 +19,8 @@ export const Login = () => {
           "fly_user",
           JSON.stringify({
             id: user.id,
-            name: user.name
+            name: user.name,
+            email: user.email
           })
         )
 

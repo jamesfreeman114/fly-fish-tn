@@ -1,5 +1,5 @@
 export const getAllReports = () => {
-    return fetch (`http://localhost:8088/reports`).then(res => res.json())
+    return fetch (`http://localhost:8088/reports?_expand=user&_expand=location`).then(res => res.json())
 }
 
 export const getReportById = (id) => {
@@ -25,4 +25,26 @@ export const editReport = (report) => {
     },
     body: JSON.stringify(report) 
   }).then((res) => res.json())
+}
+
+export const likeReport = (newLike) => {
+  return fetch("http://localhost:8088/userLikes", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newLike),
+  }).then((res) => res.json())
+}
+
+export const unlikeReport = (id) => {
+    return fetch(`http://localhost:8088/userLikes/${id}`, {
+        method: "DELETE"
+    })
+}
+
+export const deleteReport = (id) => {
+  return fetch(`http://localhost:8088/reports/${id}`, {
+    method: "DELETE"
+  })
 }

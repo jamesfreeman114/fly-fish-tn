@@ -1,6 +1,11 @@
-
 .container {
-  margin: 100px;
-  padding: 50px;
+  margin: 50px;
+  padding: 20px;
   background-image: radial-gradient(circle, #e5e6ea, #a09af6);
+}
+
+.title {
+  color: white;
+  font-size: 2rem;
+  margin: 2rem;
 }
