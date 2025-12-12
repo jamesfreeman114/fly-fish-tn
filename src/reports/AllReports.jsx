@@ -7,7 +7,7 @@ import "./AllReports.css"
 import { Heading } from "./Heading";
 import { LocationsDropdown } from "./Dropdown";
 
-export const AllReports = () => {
+export const AllReports = ( {currentUser}) => {
 
     const [reports, setReports] = useState([])
     const [filteredReports, setFilteredReports] = useState([])
@@ -42,7 +42,8 @@ export const AllReports = () => {
 
             <section className="all-reports">
                 {filteredReports.map((reportObj) => {
-                    return <Link to={`reports/${reportObj.id}`} key={reportObj.id}><Report reportObj={reportObj} />
+                    return <Link to={`reports/${reportObj.id}`} key={reportObj.id}><Report reportObj={reportObj} 
+                             currentUser={currentUser}/>
                     </Link>
                 })}
 

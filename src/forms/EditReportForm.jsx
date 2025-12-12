@@ -45,7 +45,7 @@ export const EditReport = ( {currentUser}) => {
         getAllLocations().then((locArr) => setLocations(locArr))
     })
 
-    if ( currentUser.id === report.userId) {
+  
 
     return (
 
@@ -123,9 +123,6 @@ export const EditReport = ( {currentUser}) => {
         
     )}
 
-    else {
-        navigate('/')
-    }
+
     
 
-}

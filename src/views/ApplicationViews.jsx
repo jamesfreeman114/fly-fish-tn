@@ -33,7 +33,7 @@ export const ApplicationViews = () => {
             >
 
 
-                <Route index element={<AllReports />} />
+                <Route index element={<AllReports currentUser={currentUser}/>} />
                 <Route path="reports/:id">
                     <Route index element={<ReportDetails currentUser={currentUser} />} />
                     <Route path="edit" element={<EditReport currentUser={currentUser}/>} />

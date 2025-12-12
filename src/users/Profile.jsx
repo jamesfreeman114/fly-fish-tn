@@ -48,7 +48,8 @@ export const Profile = ({ currentUser }) => {
         <section className="all-reports">
             <h3 className="title">Reports:</h3>
             {reports.map((reportObj) => {
-                return <Link to={`../reports/${reportObj.id}`} key={reportObj.id}><Report reportObj={reportObj} />
+                return <Link to={`../reports/${reportObj.id}`} key={reportObj.id}><Report reportObj={reportObj}
+                         currentUser={currentUser} />
 
                 </Link>
             })}
