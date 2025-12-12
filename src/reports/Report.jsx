@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 import "./AllReports.css"
+import { ButtonOptions } from "./ButtonOptions"
 
-export const Report = ({ reportObj, userLike}) => {
+export const Report = ({ reportObj, userLike, currentUser}) => {
       
     const report = userLike?.report || reportObj
     const user = userLike?.user || reportObj?.user
@@ -19,6 +20,8 @@ export const Report = ({ reportObj, userLike}) => {
                 </div>
                 <div className="report-subtitle">{location.name}</div>
             </div>
+                {/* <ButtonOptions report={report}
+                               currentUser={currentUser}/> */}
         </div>
 
 

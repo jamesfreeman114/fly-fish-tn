@@ -29,7 +29,8 @@ export const Favorites = ({ currentUser }) => {
 
                     return (
                         <Link to={`../reports/${userLike.report.id}`} key={userLike.id}>
-                            <Report  userLike={userLike}/>
+                            <Report  userLike={userLike}
+                                     currentUser={currentUser}/>
                         </Link>
 
 
