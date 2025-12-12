@@ -26,7 +26,7 @@ export const ApplicationViews = () => {
                 path="/"
                 element={
                     <>
-                        <NavBar />
+                        <NavBar currentUser={currentUser}/>
                         <Outlet />
                     </>
                 }
@@ -39,7 +39,7 @@ export const ApplicationViews = () => {
                     <Route path="edit" element={<EditReport currentUser={currentUser}/>} />
                 </Route>
 
-                <Route path="profile"
+                <Route path="profile/:id"
                     element={<Profile currentUser={currentUser} />} />
 
                 <Route path="new"

@@ -7,13 +7,13 @@ import { Report } from "./Report"
 export const Favorites = ({ currentUser }) => {
 
     const [likes, setLikes] = useState([])
-    
+
+
     const userId = currentUser.id
 
     useEffect(() => {
         getUserLikes(userId).then((all) => setLikes(all))
     }, [userId])
-
 
 
 
@@ -23,13 +23,13 @@ export const Favorites = ({ currentUser }) => {
                 <h2 className="app-title">My Favorite Reports</h2>
             </section>
             <section className="all-reports">
-                {likes.map((obj) => {
+                {likes.map((userLike) => {
 
-                
+
 
                     return (
-                        <Link to={`../reports/${obj.report.id}`} key={obj.id}>
-                            <Report reportObj={obj.report}/>
+                        <Link to={`../reports/${userLike.report.id}`} key={userLike.id}>
+                            <Report  userLike={userLike}/>
                         </Link>
 
 
