@@ -66,6 +66,8 @@ body {
 }
 
 .report {
+  display: flex;
+  justify-content: space-between;
   background-image: radial-gradient(circle, #e5e6ea, #a09af6);
   color: rgb(3, 3, 56);
   text-decoration: none;
@@ -105,6 +107,36 @@ body {
   display: flex;
   margin: 5px;
   text-decoration: none;
+}
+
+.report-left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+
+
+.report-right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+}
+
+.report-link {
+  display: flex;
+  align-self: flex-end;
+  font-weight: bold;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.report-link:hover{
+    box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.3),
+    2px 4px 20px hsla(0, 0%, 0%, 0.2);
+
 }
 
 .report-details {

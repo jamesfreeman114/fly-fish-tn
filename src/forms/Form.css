@@ -65,7 +65,7 @@ fieldset {
 }
 
 .form-dropdown {
-  width: 30%; /* Use parent width instead of fixed 600px */
+  width: 30%; 
 }
 
 .form-dropdown select {

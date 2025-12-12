@@ -49,7 +49,8 @@ export const ReportDetails = ({ currentUser }) => {
 
         const newLike = {
             userId: currentUserId,
-            reportId: report.id
+            reportId: report.id,
+            locationId: report.locationId
         }
 
         editReport(likedReport)
