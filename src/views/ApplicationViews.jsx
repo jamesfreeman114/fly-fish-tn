@@ -7,6 +7,9 @@ import { Profile } from "../users/Profile"
 import { NewReportForm } from "../forms/NewReportForm"
 import { EditReport } from "../forms/EditReportForm.jsx"
 import { Favorites } from "../reports/Favorites"
+import { AllLocations } from "../locations/AllLocations.jsx"
+import { LocationDetails } from "../locations/LocationDetails.jsx"
+
 
 export const ApplicationViews = () => {
 
@@ -45,6 +48,11 @@ export const ApplicationViews = () => {
 
                 <Route path="favorites"
                     element={<Favorites currentUser={currentUser} />} />
+                
+                <Route path="locations">
+                    <Route index element={<AllLocations />} />
+                    <Route path=":id" element={<LocationDetails currentUser={currentUser}/>} />
+                </Route>
             </Route>
         </Routes>
 
