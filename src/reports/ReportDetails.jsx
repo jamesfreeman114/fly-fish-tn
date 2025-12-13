@@ -1,23 +1,17 @@
 import { getReportById } from "../services/reportService"
 import { useEffect, useState } from "react"
 import "./AllReports.css"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { ButtonOptions } from "./ButtonOptions"
 
 export const ReportDetails = ({ currentUser }) => {
 
-
     const [report, setReport] = useState([])
-
     const { id } = useParams()
 
     useEffect(() => {
         getReportById(id).then((reportObj) => setReport(reportObj))
-
-    }, [])
-
-
-
+    }, [report])
 
     return (
         <section className="report-details">
@@ -27,7 +21,9 @@ export const ReportDetails = ({ currentUser }) => {
             </div>
             <div>
                 <span className="report-title">Author</span>
+                <Link to={`/profile/${report?.user?.id}`}>
                 {report?.user?.name}
+                </Link>
             </div>
             <div>
                 <span className="report-title">Location:</span>
@@ -45,12 +41,6 @@ export const ReportDetails = ({ currentUser }) => {
             <ButtonOptions 
                     currentUser={currentUser}
                     report={report}/>
-
-
-
-
         </section>
     )
-
-
 }

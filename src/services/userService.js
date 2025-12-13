@@ -15,7 +15,3 @@ export const createUser = (user) => {
         body: JSON.stringify(user),}).then(response => response.json())
 
 }
-
-export const getUserLikes = (userId) => {
-    return fetch(`http://localhost:8088/userLikes?userId=${userId}&_expand=report&_expand=user&_expand=location`).then((res) => res.json())
-}

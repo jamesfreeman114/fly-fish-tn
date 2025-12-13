@@ -26,17 +26,14 @@ export const ApplicationViews = () => {
                 path="/"
                 element={
                     <>
-                        <NavBar currentUser={currentUser}/>
+                        <NavBar currentUser={currentUser} />
                         <Outlet />
                     </>
-                }
-            >
-
-
-                <Route index element={<AllReports currentUser={currentUser}/>} />
+                }>
+                <Route index element={<AllReports currentUser={currentUser} />} />
                 <Route path="reports/:id">
                     <Route index element={<ReportDetails currentUser={currentUser} />} />
-                    <Route path="edit" element={<EditReport currentUser={currentUser}/>} />
+                    <Route path="edit" element={<EditReport currentUser={currentUser} />} />
                 </Route>
 
                 <Route path="profile/:id"
