@@ -1,0 +1,271 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ted Franklin",
+      "email": "tedf64@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Chen",
+      "email": "sarah.chen@outlook.com"
+    },
+    {
+      "id": 3,
+      "name": "Marcus Rodriguez",
+      "email": "m.rodriguez91@yahoo.com"
+    },
+    {
+      "id": 4,
+      "name": "Emily Watson",
+      "email": "ewatson.design@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "James Park",
+      "email": "jpark.dev@protonmail.com"
+    },
+    {
+      "id": 6,
+      "name": "Olivia Martinez",
+      "email": "olivia_martinez@icloud.com"
+    },
+    {
+      "id": 7,
+      "name": "David Nguyen",
+      "email": "dnguyen2024@gmail.com"
+    },
+    {
+      "email": "ew45@gmail.com",
+      "name": "Eric Washington",
+      "id": 8
+    },
+    {
+      "email": "johnnyM78@hotmail.com",
+      "name": "John Matthews",
+      "id": 9
+    },
+    {
+      "email": "billyP90@tsu.edu",
+      "name": "Bill Plotchman",
+      "id": 10
+    },
+    {
+      "email": "JLocke@gmail.com",
+      "name": "Jane Locke",
+      "id": 11
+    },
+    {
+      "email": "sheilaT@outlook.com",
+      "name": "Sheila Tumbleton",
+      "id": 12
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "South Holston River",
+      "type": "Tailwater River"
+    },
+    {
+      "id": 2,
+      "name": "Watauga River",
+      "type": "Tailwater River"
+    },
+    {
+      "id": 3,
+      "name": "Hiwassee River",
+      "type": "Tailwater River"
+    },
+    {
+      "id": 4,
+      "name": "Caney Fork River",
+      "type": "Tailwater River"
+    },
+    {
+      "id": 5,
+      "name": "Elk River",
+      "type": "Tailwater River"
+    },
+    {
+      "id": 6,
+      "name": "Tellico Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 7,
+      "name": "Chilhowee Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 8,
+      "name": "Wilbur Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 9,
+      "name": "Abrams Creek",
+      "type": "Freestone Stream"
+    },
+    {
+      "id": 10,
+      "name": "Doe River",
+      "type": "Freestone Stream"
+    },
+    {
+      "id": 11,
+      "name": "Laurel Creek",
+      "type": "Freestone Stream"
+    },
+    {
+      "id": 12,
+      "name": "Little Pigeon River",
+      "type": "Freestone Stream"
+    }
+  ],
+  "reports": [
+    {
+      "id": 1,
+      "userId": 1,
+      "locationId": 1,
+      "date": "8/25/2025",
+      "title": "Late Summer Trout Bite",
+      "body": "Caught a very nice 24 inch brown trout on an olive Wooly Bugger just below the dam around sunset.",
+      "likes": 1
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "locationId": 2,
+      "date": "9/15/2025",
+      "title": "Early Afternoon Caddis Hatch Success",
+      "body": "Caddis flies are still hatching on the Watauga. Caught 4 rainbow trout this afternoon on size 16-18 caddis dry flies.",
+      "likes": 0
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "locationId": 11,
+      "date": "9/19/2025",
+      "title": "Wild Brook Trout found in Deep Plunge Pools",
+      "body": "Had a great day fishing on this beautiful wild mountain stream. Caught 3 native brook trout using nymphs in deep pools below waterfalls.",
+      "likes": 1
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "locationId": 4,
+      "date": "10/12/2025",
+      "title": "Brook Trout on Streamers",
+      "body": "Caught 5 Brook Trout on small white size #12 streamer flies below the dam. ",
+      "likes": 1
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "locationId": 7,
+      "date": "10/30/2025",
+      "title": "Rainbow Trout in shallows",
+      "body": "Caught nine rainbow trout near the shoreline with dry flies.",
+      "likes": 0
+    },
+    {
+      "id": 7,
+      "userId": 3,
+      "locationId": 5,
+      "date": "11/11/2025",
+      "title": "Brown Trout moving to spawning areas",
+      "body": "The Brown Trout have begun their spawning pattern. Be careful to avoid stepping on their eggs.  ",
+      "likes": 1
+    },
+    {
+      "id": 8,
+      "userId": 3,
+      "locationId": 10,
+      "date": "11/30/2025",
+      "title": "High Water Level & Fast Current!",
+      "body": "With the recent heavy rains the river level is much higher than usual and flows aren't suitable for fishing. Other nearby locations such as the South Holston River or the Watauga River might be better options.",
+      "likes": 1
+    },
+    {
+      "id": 9,
+      "userId": 7,
+      "locationId": 8,
+      "date": "12/9/2025",
+      "title": "Lots of rainbow trout recently stocked here!",
+      "body": "The local fisheries have recently stocked this lake with lots of small rainbow trout between 10-12\" long. These can be easily caught on brightly colored Egg or Worm patterns. Great place for a beginner!",
+      "likes": 1
+    },
+    {
+      "title": "Large Lake Trout Caught Very Deep",
+      "locationId": 7,
+      "userId": 12,
+      "body": "This lake is filled with gigantic lake trout! They can be caught using heavily weighted sinking lines and large streamer patterns fished near the bottom! ",
+      "date": "12/9/2025",
+      "likes": 0,
+      "id": 10
+    },
+    {
+      "id": 11,
+      "userId": 5,
+      "locationId": 6,
+      "date": "12/12/2025",
+      "title": "Early Morning Catch",
+      "body": "Caught several fish on small Blue Wing Olive dry flies early in the morning today.",
+      "likes": 1
+    },
+    {
+      "title": "Freezing Cold Temps = Very Few Fish",
+      "locationId": 9,
+      "userId": 6,
+      "body": "It's getting very cold on these streams up in the higher elevations. Only caught two very small trout all day here.",
+      "date": "12/12/2025",
+      "likes": 0,
+      "id": 12
+    }
+  ],
+  "userLikes": [
+    {
+      "userId": 1,
+      "reportId": 9,
+      "locationId": 8,
+      "id": 3
+    },
+    {
+      "userId": 5,
+      "reportId": 7,
+      "locationId": 5,
+      "id": 4
+    },
+    {
+      "userId": 5,
+      "reportId": 8,
+      "locationId": 10,
+      "id": 5
+    },
+    {
+      "userId": 5,
+      "reportId": 1,
+      "locationId": 1,
+      "id": 6
+    },
+    {
+      "userId": 6,
+      "reportId": 11,
+      "locationId": 6,
+      "id": 7
+    },
+    {
+      "userId": 6,
+      "reportId": 4,
+      "locationId": 4,
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "reportId": 3,
+      "locationId": 11,
+      "id": 9
+    }
+  ]
+}
