@@ -43,7 +43,7 @@ export const EditReport = ( {currentUser}) => {
 
     useEffect(()=>{
         getAllLocations().then((locArr) => setLocations(locArr))
-    })
+    }, [])
 
   
 

@@ -15,7 +15,7 @@ export const ButtonOptions = ({ report, currentUser }) => {
     const getAndSetUserLikes = () => {
          getUserLikes(currentUserId).then((allLikes) => setLikes(allLikes))}
 
-    useEffect(() => { getAndSetUserLikes() }, [likes])
+    useEffect(() => { getAndSetUserLikes() }, [])
 
     const handleEdit = (event) => {
         event.preventDefault()
@@ -47,6 +47,7 @@ export const ButtonOptions = ({ report, currentUser }) => {
         editReport(likedReport)
             .then(() => { likeReport(newLike) })
             .then(() => { getAndSetUserLikes() })
+            .then(() => {navigate("/favorites")})
 
     }
 
@@ -66,6 +67,7 @@ export const ButtonOptions = ({ report, currentUser }) => {
         editReport(unlikedReport)
             .then(() => { unlikeReport(userLikedReport.id) })
             .then(() => { getAndSetUserLikes() })
+            .then(() => {navigate("/")})
 
     }
 
