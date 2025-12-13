@@ -1,37 +1,30 @@
-import { editReport, likeReport, unlikeReport, deleteReport } from "../services/reportService"
+import { getUserLikes, likeReport, unlikeReport } from "../services/userLikesService"
+import { editReport, deleteReport } from "../services/reportService"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import "./AllReports.css"
-import { getUserLikes } from "../services/userService"
 
 
 export const ButtonOptions = ({ report, currentUser }) => {
 
-
     const [likes, setLikes] = useState([])
     const navigate = useNavigate()
-
     const currentUserId = currentUser.id
-
     const userLikedReport = likes.find(like => like.reportId === report.id)
 
+    const getAndSetUserLikes = () => {
+         getUserLikes(currentUserId).then((allLikes) => setLikes(allLikes))}
 
-
-    useEffect(() => {
-        getUserLikes(currentUserId).then((allLikes) => setLikes(allLikes))
-    }, [])
+    useEffect(() => { getAndSetUserLikes() }, [likes])
 
     const handleEdit = (event) => {
         event.preventDefault()
-
-        navigate(`/reports/${report.id}/edit`)
-    }
+        navigate(`/reports/${report.id}/edit`)}
 
     const handleDelete = (event) => {
         event.preventDefault()
+        deleteReport(report.id).then(() => navigate(`/`))}
 
-        deleteReport(report.id).then(() => navigate(`/`))
-    }
     const handleLike = (event) => {
         event.preventDefault()
 
@@ -53,7 +46,7 @@ export const ButtonOptions = ({ report, currentUser }) => {
 
         editReport(likedReport)
             .then(() => { likeReport(newLike) })
-            .then(() => { navigate(`/favorites`) })
+            .then(() => { getAndSetUserLikes() })
 
     }
 
@@ -72,42 +65,33 @@ export const ButtonOptions = ({ report, currentUser }) => {
 
         editReport(unlikedReport)
             .then(() => { unlikeReport(userLikedReport.id) })
-            .then(() => { navigate(`/favorites`) })
+            .then(() => { getAndSetUserLikes() })
 
     }
 
-
-
-
-    return <div className="btn-container">
-
+    return (
+    <div className="report-btn">
         {report.userId === currentUser.id ?
-            (<button className="btn-container btn-primary"
+            (<button className="btn-primary"
                 onClick={handleEdit}
-            >Edit</button>) : (
-                ""
-            )}
+            >Edit</button>) : ("")}
 
         {report.userId === currentUser.id ?
-            (<button className="btn-container btn-primary"
+            (<button className="btn-primary"
                 onClick={handleDelete}
-            >Delete</button>) : (
-                ""
-            )}
+            >Delete</button>) : ("")}
 
         {report.userId != currentUser.id &&
             !userLikedReport ?
-            (<button className="form-btn btn-primary"
-                onClick={handleLike}>
-                Like</button>) : ("")}
+            (<button className="btn-primary"
+                onClick={handleLike}
+            >Like</button>) : ("")}
 
         {report.userId != currentUser.id &&
             userLikedReport ?
-            (<button className="btn-container btn-primary"
+            (<button className="btn-primary"
                 onClick={handleUnlike}
-
-            >Unlike</button>) : (
-                ""
-            )}
+            >Unlike</button>) : ("")}
     </div>
+    )
 }

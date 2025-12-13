@@ -1,17 +1,11 @@
 export const LocationsDropdown = ( {locations, setLocationId}) => {
 
-
-
     return (
         <div className="report-dropdown">
             <label className="dropdown-label">Select Location:
             <select
                 onChange={(event) => {
-                    setLocationId(parseInt(event.target.value))
-                    
-                }}
-
-            >
+                    setLocationId(parseInt(event.target.value))}}>
                 {locations.map((location) => {
                     return (
                         <option
@@ -20,12 +14,9 @@ export const LocationsDropdown = ( {locations, setLocationId}) => {
                             value={location.id}
                         >
                             {location.name}
-
                         </option>
                     )
                 })}
-
-
             </select>
             </label>
         </div>

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { getAllReports } from "../services/reportService";
 import { Report } from "./Report";
 import { getAllLocations } from "../services/locationService";
@@ -7,14 +6,14 @@ import "./AllReports.css"
 import { Heading } from "./Heading";
 import { LocationsDropdown } from "./Dropdown";
 
-export const AllReports = ( {currentUser}) => {
+export const AllReports = ({ currentUser }) => {
 
     const [reports, setReports] = useState([])
     const [filteredReports, setFilteredReports] = useState([])
     const [locations, setLocations] = useState([])
     const [locationId, setLocationId] = useState(0)
 
-    const getAndSetReports = () => {getAllReports().then((allReports) => setReports(allReports)) }
+    const getAndSetReports = () => { getAllReports().then((allReports) => setReports(allReports)) }
 
     useEffect(() => { getAndSetReports() }, [])
     useEffect(() => { getAllLocations().then((allLocations) => setLocations(allLocations)) }, [])
@@ -42,9 +41,19 @@ export const AllReports = ( {currentUser}) => {
 
             <section className="all-reports">
                 {filteredReports.map((reportObj) => {
-                    return <Link to={`reports/${reportObj.id}`} key={reportObj.id}><Report reportObj={reportObj} 
-                             currentUser={currentUser}/>
-                    </Link>
+                    return (
+
+                        
+
+                            <Report 
+                                    className="report"
+                                    key={reportObj.id}
+                                    reportObj={reportObj} 
+                                    currentUser={currentUser} />
+                                    
+                       
+
+                    )
                 })}
 
             </section>
