@@ -11,7 +11,7 @@ export const ReportDetails = ({ currentUser }) => {
 
     useEffect(() => {
         getReportById(id).then((reportObj) => setReport(reportObj))
-    }, [report])
+    }, [])
 
     return (
         <section className="report-details">

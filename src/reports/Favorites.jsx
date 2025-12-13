@@ -10,7 +10,7 @@ export const Favorites = ({ currentUser }) => {
 
     useEffect(() => {
         getUserLikes(userId).then((all) => setLikes(all))
-    }, [userId])
+    }, [])
 
     return (
         <section>
