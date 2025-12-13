@@ -32,3 +32,7 @@ export const deleteReport = (id) => {
     method: "DELETE"
   })
 }
+
+export const getReportByLocationId = (locationId) => {
+    return fetch (`http://localhost:8088/reports?locationId=${locationId}&_expand=user&_expand=location`).then(res => res.json())
+}

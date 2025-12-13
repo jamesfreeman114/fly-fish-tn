@@ -1,0 +1,86 @@
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: radial-gradient(circle, #e5e6ea, #a09af6);
+  color: rgb(3, 3, 56);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid;
+  margin: 0;
+  align-items: flex-start;
+  box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.3),
+    2px 4px 20px hsla(0, 0%, 0%, 0.2);
+}
+
+.location:hover{
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+.location * {
+  text-decoration: none;
+}
+
+.location a {
+  text-decoration: none;
+}
+
+.location-title {
+  font-weight: bold;
+  font-size: large;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.location-subtitle {
+  display: flex;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.all-locations {
+  display: flex;
+  text-decoration: none;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start; 
+  width: 100%;
+  height: 100%;
+}
+
+.all-locations a {
+  text-decoration: none;
+  color: inherit;
+  width: 30% !important;
+  display: block !important;
+  margin: 1.5% !important;
+  box-sizing: border-box;
+}
+
+.location-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    object-position: center;
+    border-radius: 8px; 
+}
+
+.location-detail-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; 
+    object-position: center;
+    border-radius: 8px; 
+}
+
+.location-container {
+    margin: 100px;
+    padding: 50px;
+    background-image: radial-gradient(circle, #e5e6ea, #a09af6);
+
+}
