@@ -9,7 +9,8 @@ import { EditReport } from "../forms/EditReportForm.jsx"
 import { Favorites } from "../reports/Favorites"
 import { AllLocations } from "../locations/AllLocations.jsx"
 import { LocationDetails } from "../locations/LocationDetails.jsx"
-
+import { AllFlies } from "../flies/AllFlies.jsx"
+import { FlyDetails } from "../flies/FlyDetails.jsx"
 
 export const ApplicationViews = () => {
 
@@ -52,6 +53,12 @@ export const ApplicationViews = () => {
                 <Route path="locations">
                     <Route index element={<AllLocations />} />
                     <Route path=":id" element={<LocationDetails currentUser={currentUser}/>} />
+                
+                </Route>
+                <Route path="flies">
+                    <Route index element={<AllFlies />} />
+                    <Route path=":id" element={<FlyDetails currentUser={currentUser}/>} />
+                
                 </Route>
             </Route>
         </Routes>
