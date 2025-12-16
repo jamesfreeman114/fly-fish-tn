@@ -14,7 +14,7 @@ export const ReportDetails = ({ currentUser }) => {
     }, [])
 
     return (
-        <section className="report-details">
+        <section className="report-details" id="parchment">
             <div>
                 <span className="report-title">Title:</span>
                 {report.title}
