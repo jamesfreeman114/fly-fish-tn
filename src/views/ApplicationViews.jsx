@@ -11,6 +11,7 @@ import { AllLocations } from "../locations/AllLocations.jsx"
 import { LocationDetails } from "../locations/LocationDetails.jsx"
 import { AllFlies } from "../flies/AllFlies.jsx"
 import { FlyDetails } from "../flies/FlyDetails.jsx"
+import { Homepage } from "../Homepage/Homepage.jsx"
 
 export const ApplicationViews = () => {
 
@@ -34,9 +35,10 @@ export const ApplicationViews = () => {
                         <Outlet />
                     </>
                 }>
-                <Route index element={<AllReports currentUser={currentUser} />} />
-                <Route path="reports/:id">
-                    <Route index element={<ReportDetails currentUser={currentUser} />} />
+                <Route index element={<Homepage currentUser={currentUser} />} />
+                <Route path="reports">
+                    <Route index element={<AllReports currentUser={currentUser} />} />
+                    <Route path = ":id" element={<ReportDetails currentUser={currentUser} />} />
                     <Route path="edit" element={<EditReport currentUser={currentUser} />} />
                 </Route>
 
