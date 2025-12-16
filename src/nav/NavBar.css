@@ -4,11 +4,18 @@
     left: 0;
     display: flex;
     flex-wrap: nowrap;
-    background-color: rgba(0, 0, 0, 0.0); /* Added transparency */
+    background-color:  rgba(0, 0, 0, 0.5); /* Added transparency */
     margin: 0;
     width: 100%;
     padding: 1rem;
     z-index: 100; /* Higher than logo */
+    box-shadow: 0 2px 4px rgba(0, 0, 3, 0.9), 
+            0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.1s ease; 
+}
+
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.95); /* Solid background when scrolled */
 }
 
   .navbar-item {
@@ -16,14 +23,20 @@
     list-style-type: none;
     text-align: left;
     color: whitesmoke;
+      
+
     
   }
 
   .navbar-link {
     text-decoration: none;
+    
+    margin: 0.5rem;
+    padding: 0.5rem;
     color: whitesmoke;
     font-family: "Questrial";
     letter-spacing: 1px;
+    
     
   }
 

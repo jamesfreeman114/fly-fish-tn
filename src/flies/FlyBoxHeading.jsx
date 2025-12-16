@@ -1,12 +1,12 @@
 import fishLogo from "../assets/Logo-png.png"
-import "./AllReports.css"
 
-export const Heading = () => {
+export const FlyBoxHeading = () => {
+
     return (
-         <div className="homepage-header-container">
+        <div className="homepage-header-container">
                                 <img
                                     className="homepage-header"
-                                    src="https://i.imgur.com/fFc08oV.jpeg"
+                                    src="https://i.imgur.com/apCAvOk.jpeg"
                                     alt="image">
                 
                                 </img>
@@ -16,6 +16,6 @@ export const Heading = () => {
                                     src={fishLogo}>
                                 </img>
                             </div>
-            )
+    )
     
 }

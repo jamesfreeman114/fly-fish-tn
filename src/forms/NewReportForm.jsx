@@ -46,7 +46,12 @@ export const NewReportForm = ({ currentUser }) => {
 
 
     return (
+
+        <>
+        <img className="form-background" src="https://i.imgur.com/sR0L3f1.jpeg" alt="background" />
+        
         <form className="form-container">
+            
             <h2 className="form-heading">New Report Form</h2>
             <fieldset>
                 <div className="form-group">
@@ -99,6 +104,7 @@ export const NewReportForm = ({ currentUser }) => {
             </fieldset>
 
         </form>
+        </>
     )
 
 }

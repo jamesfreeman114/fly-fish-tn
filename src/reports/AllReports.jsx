@@ -32,7 +32,7 @@ export const AllReports = ({ currentUser }) => {
 
     return (
         <>
-            < Heading />
+            {/* < Heading /> */}
 
             <LocationsDropdown
                 locations={locations}
