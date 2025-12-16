@@ -49,7 +49,10 @@ export const EditReport = ( {currentUser}) => {
 
     return (
 
-     
+        <>
+        <img className="form-background" src="https://i.imgur.com/sR0L3f1.jpeg" alt="background" />
+        
+        
         <form className="form-container">
             <h2 className="form-heading">Edit Report</h2>
             <fieldset>
@@ -120,6 +123,7 @@ export const EditReport = ( {currentUser}) => {
             
 
         </form>
+        </>
         
     )}
 
