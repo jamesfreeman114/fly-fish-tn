@@ -1,17 +1,22 @@
-  .navbar {
+.navbar {
+    position: fixed; /* or absolute */
+    top: 0;
+    left: 0;
     display: flex;
     flex-wrap: nowrap;
-    background-color: rgb(81, 78, 78);
+    background-color: rgba(0, 0, 0, 0.0); /* Added transparency */
     margin: 0;
     width: 100%;
     padding: 1rem;
-  }
+    z-index: 100; /* Higher than logo */
+}
 
   .navbar-item {
     flex-basis: 20%;
     list-style-type: none;
     text-align: left;
     color: whitesmoke;
+    
   }
 
   .navbar-link {
@@ -19,6 +24,7 @@
     color: whitesmoke;
     font-family: "Questrial";
     letter-spacing: 1px;
+    
   }
 
   .navbar-logout {
