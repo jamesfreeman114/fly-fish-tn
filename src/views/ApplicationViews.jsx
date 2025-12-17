@@ -15,6 +15,7 @@ import { Homepage } from "../Homepage/Homepage.jsx"
 import { Heading } from "../reports/Heading.jsx"
 import { LocationsHeading } from "../locations/LocationsHeading.jsx"
 import { FlyBoxHeading } from "../flies/FlyBoxHeading.jsx"
+import { HomepageHeading } from "../Homepage/HomepageHeading.jsx"
 
 export const ApplicationViews = () => {
 
@@ -35,11 +36,12 @@ export const ApplicationViews = () => {
                 element={
                     <>
                         <NavBar currentUser={currentUser} />
+                        {/* <HomepageHeading /> */}
                         <Outlet />
                     </>
                 }>
                 <Route index element={<Homepage currentUser={currentUser} />} />
-                <Route path="reports" element={<>< Heading /> <Outlet/></>}>
+                <Route path="reports">
                     <Route index element={<AllReports currentUser={currentUser} />} />
                     <Route path = ":id" element={<ReportDetails currentUser={currentUser} />} />
                 </Route>
@@ -56,12 +58,12 @@ export const ApplicationViews = () => {
                 <Route path="favorites"
                     element={<Favorites currentUser={currentUser} />} />
                 
-                <Route path="locations" element={<><LocationsHeading/><Outlet/></>}>
+                <Route path="locations">
                     <Route index element={<AllLocations />} />
                     <Route path=":id" element={<LocationDetails currentUser={currentUser}/>} />
                 
                 </Route>
-                <Route path="flies" element={<><FlyBoxHeading/><Outlet/></>}>
+                <Route path="flies">
                     <Route index element={<AllFlies />} />
                     <Route path=":id" element={<FlyDetails currentUser={currentUser}/>} />
                 

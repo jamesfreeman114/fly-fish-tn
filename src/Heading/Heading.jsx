@@ -1,9 +1,6 @@
 import fishLogo from "../assets/Logo-png.png"
 
-export const HomepageHeading = () => {
-
-    // const [links, setLinks] = useState([])
-
+export const Heading = () => {
     return (
          <div className="homepage-header-container">
                         <img

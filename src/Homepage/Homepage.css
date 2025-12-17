@@ -7,6 +7,10 @@
     margin-top: 0; /* Remove any top margin */
 }
 
+.homepage {
+    display: flex;
+}
+
 .homepage-header {
     display: block;
     width: 100%;
@@ -20,7 +24,7 @@
 
 .homepage-logo {
     position: absolute;
-    top: 10%;  /* Adjust as needed */
+    top: 0%;  /* Adjust as needed */
     left: 5%; /* Adjust as needed */
     width: 250px; /* Adjust size */
     width: clamp(150px, 15vw, 300px); /* Min 100px, scales to 15vw, max 300px */
@@ -55,3 +59,37 @@
     min-width: 0; /* Prevents flex items from overflowing */
 }
 
+.homepage-btn {
+  align-self: center;
+  align-items: center;
+}
+
+.homepage-btn:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.btn-alt {
+    display: flex;
+    align-items: center;
+  font-family: 'Questrial', sans-serif;
+  margin: 10px;
+  padding: 10px;
+  width: 170px;
+  align-self: center;
+  text-decoration: none;
+  border-radius: 0.5rem;
+
+}
+
+.btn-alt:hover {
+  background-color: #adb6da;
+
+}
+
+.btn-alt:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}

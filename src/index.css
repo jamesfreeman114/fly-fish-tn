@@ -125,3 +125,8 @@ table {
   border-spacing: 0;
 }
 
+main,
+section,
+.page-content {
+    padding-top: 140px;
+}

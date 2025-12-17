@@ -1,47 +1,50 @@
-.navbar {
-    position: fixed; /* or absolute */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Rubik+Dirt&display=swap');
+
+.navbar-container {
+    position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     display: flex;
-    flex-wrap: nowrap;
-    background-color:  rgba(0, 0, 0, 0.5); /* Added transparency */
+    align-items: center;
+    padding: 5px;
+    justify-content: space-between;
+    background-color: #000;
+    z-index: 100;
+}
+
+.navbar-logo {
+    width: clamp(50px, 10vw, 100px);
+    padding: 5px 50px;
+    height: auto;
+    
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    list-style: none;
     margin: 0;
-    width: 100%;
-    padding: 1rem;
-    z-index: 100; /* Higher than logo */
-    box-shadow: 0 2px 4px rgba(0, 0, 3, 0.9), 
-            0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.1s ease; 
+    padding: 0;
+    gap: 0.5rem;
 }
 
-.navbar-scrolled {
-    background-color: rgba(0, 0, 0, 0.95); /* Solid background when scrolled */
-}
-
-  .navbar-item {
-    flex-basis: 20%;
+.navbar-item {
     list-style-type: none;
-    text-align: left;
-    color: whitesmoke;
-      
+}
 
-    
-  }
-
-  .navbar-link {
+.navbar-link {
     text-decoration: none;
-    
-    margin: 0.5rem;
-    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0.5rem 1rem;
     color: whitesmoke;
-    font-family: "Questrial";
+    font-family: "Questrial", sans-serif;
+    font-size: 22pt;
     letter-spacing: 1px;
-    
-    
-  }
+    white-space: nowrap;
+}
 
-  .navbar-logout {
-    margin-left: auto;
-  }
-
-  
+.navbar-link:hover {
+    color: #a3dfff;
+}

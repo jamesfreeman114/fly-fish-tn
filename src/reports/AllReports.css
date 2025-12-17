@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Rubik+Dirt&display=swap');
+
+main,
+section,
+.page-content {
+    padding-top: 140px;
+}
 
 body {
   display: flex;
