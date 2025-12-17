@@ -25,19 +25,7 @@ export const Homepage = ( {currentUser}) => {
         <section>
 
             <HomepageHeading />
-            {/* <div className="homepage-header-container">
-                <img
-                    className="homepage-header"
-                    src="https://i.imgur.com/kRmKAHx.jpeg"
-                    alt="image">
 
-                </img>
-
-                <img
-                    className="homepage-logo"
-                    src={fishLogo}>
-                </img>
-            </div> */}
             <div className="home-page-welcome">
                 <h2>Welcome to Fly Fish Tennessee!</h2>
                 <p>We're thrilled to welcome you to Fly Fish TN, an online resource for all things fly fishing in the great state of Tennessee! Whether you are a first time angler looking for tips on how to get started, or a seasoned pro willing to share info on how to catch the big one we provide a space for fishermen and women to connect and share their love of the outdoors through this amazing hobby! Feel free to check out some recent fishing reports below, or use the Locations tab to find more detailed info about a specific destination!</p>
@@ -57,7 +45,7 @@ export const Homepage = ( {currentUser}) => {
 
             </div>
 
-            <button className="form-btn btn-primary"
+            <button className="homepage-btn btn-alt"
                     onClick={handleClick}
             
             >See More...

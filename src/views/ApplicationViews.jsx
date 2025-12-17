@@ -54,7 +54,7 @@ export const ApplicationViews = () => {
 
 
                 <Route path="favorites"
-                    element={<Favorites currentUser={currentUser} />} />
+                    element={<>< Heading /> <Outlet/><Favorites currentUser={currentUser} /></>} />
                 
                 <Route path="locations" element={<><LocationsHeading/><Outlet/></>}>
                     <Route index element={<AllLocations />} />

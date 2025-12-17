@@ -5,24 +5,9 @@ import "./NavBar.css"
 export const NavBar = ( { currentUser }) => {
     
     const navigate = useNavigate()
-    const [scrolled, setScrolled] = useState(false)
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 300) {
-                setScrolled(true)
-            } else {
-                setScrolled(false)
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll)
-        
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
 
     return (
-    <ul className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
+    <ul className="navbar">
         <li className="navbar-item">
             <Link to={`/profile/${currentUser.id}`} className="navbar-link">Profile</Link>
         </li>

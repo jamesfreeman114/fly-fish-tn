@@ -1,47 +1,41 @@
 .navbar {
-    position: fixed; /* or absolute */
+
+    position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     display: flex;
-    flex-wrap: nowrap;
-    background-color:  rgba(0, 0, 0, 0.5); /* Added transparency */
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    background-color:  black;
     margin: 0;
-    width: 100%;
     padding: 1rem;
     z-index: 100; /* Higher than logo */
-    box-shadow: 0 2px 4px rgba(0, 0, 3, 0.9), 
-            0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.1s ease; 
 }
 
-.navbar-scrolled {
-    background-color: rgba(0, 0, 0, 0.95); /* Solid background when scrolled */
-}
+
 
   .navbar-item {
-    flex-basis: 20%;
     list-style-type: none;
     text-align: left;
     color: whitesmoke;
+    font-family: 'Questrial', sans-serif;
+    font-size: 30px;
+    padding: 0px 20px
       
 
     
   }
 
   .navbar-link {
+    display: inline-block;
     text-decoration: none;
-    
-    margin: 0.5rem;
-    padding: 0.5rem;
     color: whitesmoke;
     font-family: "Questrial";
     letter-spacing: 1px;
+    white-space: nowrap;
     
     
-  }
-
-  .navbar-logout {
-    margin-left: auto;
   }
 
   
