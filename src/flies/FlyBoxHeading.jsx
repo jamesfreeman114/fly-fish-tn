@@ -6,7 +6,7 @@ export const FlyBoxHeading = () => {
         <div className="homepage-header-container">
                                 <img
                                     className="homepage-header"
-                                    src="https://i.imgur.com/apCAvOk.jpeg"
+                                    src="https://i.imgur.com/8HCqe5Q.jpeg"
                                     alt="image">
                 
                                 </img>
