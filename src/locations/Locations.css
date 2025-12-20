@@ -82,6 +82,11 @@
     border-radius: 8px;
 }
 
+.location-detail-image:hover {
+    transform: scale(1.05); 
+
+}
+
 .location-container {
     margin: 100px;
     padding: 50px;
@@ -92,6 +97,10 @@
 .weather-reports {
     display: flex;
 }
+
+.weather-report:hover {
+   transform: scale(1.03);
+} 
 
 .weather-report {
   
@@ -120,7 +129,8 @@
 }
 
 .title {
+    display: flex;
     color: rgb(10, 35, 5);
     font-size: 40px;
-    align-self: center;
+    justify-content: center;
 }

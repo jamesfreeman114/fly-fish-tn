@@ -32,6 +32,10 @@ export const Homepage = ( {currentUser}) => {
 
             </div>
 
+            <div>
+                <h2 className="detail-title">Check out some of our members latest Fishing Reports! </h2>
+            </div>
+
             <div className="homepage-reports">
                 {reports.slice(0,3).map((reportObj) => {
                     return (
