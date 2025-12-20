@@ -12,18 +12,18 @@ export const FlyDetails = () => {
     }, [])
 
     return (
-        <section className="location-container">
+        <section className="fly-container">
 
-            <div className="location-title">{fly.name}</div>
-            <div className="location-subtitle">{fly.type}</div>
+            <div className="fly-title">{fly.name}</div>
+            <div className="fly-subtitle">{fly.type}</div>
 
             <img
                 src={fly.imageUrl}
                 alt={fly.name}
-                className="location-detail-image"
+                className="fly-detail-image"
             />
 
-            <div className="location-subtitle">{fly.description}</div>
+            <div className="fly-subtitle">{fly.description}</div>
 
         </section>
     )

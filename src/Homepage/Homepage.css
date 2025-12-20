@@ -8,6 +8,10 @@
     /* Remove any top margin */
 }
 
+.homepage-header-container:hover {
+    transform: scale(1.05);
+}
+
 .homepage-header {
     display: block;
     width: 100%;
@@ -17,6 +21,11 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+.homepage-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .homepage-logo {
@@ -36,11 +45,20 @@
 
 .home-page-welcome {
     background-color: white;
+    font-size: 20pt;
     text-align: center;
     margin: 1rem;
     padding: 2rem;
     color: rgb(0, 0, 0);
 }
+
+.home-page-welcome:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+
 
 
 .homepage-reports {
@@ -63,6 +81,8 @@
 
 
 .homepage-btn {
+    display: flex;
+    justify-content: center;
     align-self: center;
     align-items: center;
 }

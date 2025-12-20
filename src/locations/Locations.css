@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: radial-gradient(circle, #e5e6ea, #a09af6);
+    background-color: whitesmoke;
     color: rgb(3, 3, 56);
     text-decoration: none;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     padding: 10px;
     width: 100%;
     text-align: left;
@@ -31,15 +31,19 @@
 }
 
 .location-title {
+    display: flex;
+    justify-content: center;
     font-weight: bold;
-    font-size: large;
+    font-size: 40px;
     text-decoration: none;
     margin: 5px;
 }
 
 .location-subtitle {
     display: flex;
-    margin: 5px;
+    margin: 15px;
+    font-size: 16pt;
+    padding: 0.5rem;
     text-decoration: none;
 }
 
@@ -81,7 +85,7 @@
 .location-container {
     margin: 100px;
     padding: 50px;
-    background-image: radial-gradient(circle, #e5e6ea, #a09af6);
+    background-color: whitesmoke;
 
 }
 
@@ -94,8 +98,8 @@
     flex-direction: column;
     display: flex;
 
-    background-image: radial-gradient(circle, #e5e6ea, #a09af6);
-    color: rgb(3, 3, 56);
+    background-color: whitesmoke;
+    color: rgb(10, 35, 5);
     text-decoration: none;
     border-radius: 0.5rem;
     padding: 10px;
@@ -110,6 +114,13 @@
 }
 
 .weather-heading {
+    color: rgb(10, 35, 5);
+    font-size: 18pt;
     text-align: center;
 }
 
+.title {
+    color: rgb(10, 35, 5);
+    font-size: 40px;
+    align-self: center;
+}
