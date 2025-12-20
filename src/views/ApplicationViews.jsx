@@ -16,6 +16,7 @@ import { Heading } from "../reports/Heading.jsx"
 import { LocationsHeading } from "../locations/LocationsHeading.jsx"
 import { FlyBoxHeading } from "../flies/FlyBoxHeading.jsx"
 import { DetailsHeading } from "../reports/DetailsHeading.jsx"
+import { FavoritesHeading } from "../reports/FavoritesHeading.jsx"
 
 export const ApplicationViews = () => {
 
@@ -55,7 +56,7 @@ export const ApplicationViews = () => {
 
 
                 <Route path="favorites"
-                    element={<>< Heading /> <Outlet/><Favorites currentUser={currentUser} /></>} />
+                    element={<>< FavoritesHeading /> <Outlet/><Favorites currentUser={currentUser} /></>} />
                 
                 <Route path="locations" element={<><LocationsHeading/><Outlet/></>}>
                     <Route index element={<AllLocations />} />

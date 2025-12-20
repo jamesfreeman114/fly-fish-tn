@@ -14,6 +14,13 @@ export const AllFlies = () => {
 
     return (
         <section className="all-locations">
+
+            <div className="home-page-welcome">
+                
+                <p>Choosing the right fly pattern is crucial for a successful day on the water! Always make sure to keep an eye on your surroundings and watch what the fish are feeding on to best match the hatch! Check out some of our current fly pattern recommendations below. </p>
+
+            </div>
+
             {flies.map((fly) => {
                 return (
                     <Link   to={`./${fly.id}`}
