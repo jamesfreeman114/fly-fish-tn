@@ -1,11 +1,20 @@
-.container {
+.profile-container {
   margin: 50px;
   padding: 20px;
-  background-image: radial-gradient(circle, #e5e6ea, #a09af6);
+  background-color: whitesmoke;
 }
 
 .title {
   color: white;
   font-size: 2rem;
   margin: 2rem;
+}
+
+.profile-heading {
+  margin: 2rem 2rem;
+  font-size: 30px;
+  color: rgb(10, 35, 5); ;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }

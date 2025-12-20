@@ -72,6 +72,7 @@ export const ButtonOptions = ({ report, currentUser }) => {
     }
 
     return (
+    
     <div className="report-btn">
         {report.userId === currentUser.id ?
             (<button className="btn-primary"
@@ -95,5 +96,6 @@ export const ButtonOptions = ({ report, currentUser }) => {
                 onClick={handleUnlike}
             >Unlike</button>) : ("")}
     </div>
+    
     )
 }

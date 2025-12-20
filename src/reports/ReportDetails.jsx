@@ -15,32 +15,31 @@ export const ReportDetails = ({ currentUser }) => {
 
     return (
         <section className="report-details" id="parchment">
-            <div>
-                <span className="report-title">Title:</span>
+            <div className="detail-title">
+                
                 {report.title}
             </div>
-            <div>
-                <span className="report-title">Author</span>
-                <Link to={`/profile/${report?.user?.id}`}>
+            <div className="detail-subtitle"> 
+                
+                <Link to={`/profile/${report?.user?.id}`} className="detail-subtitle">
                 {report?.user?.name}
-                </Link>
+                </Link>, {report?.location?.name}, {report?.date}
             </div>
-            <div>
-                <span className="report-title">Location:</span>
-                {report?.location?.name}
-            </div>
-            <div>
-                <span className="report-title">Body:</span>
+            
+            <div className="detail-body">
+                
                 {report.body}
             </div>
-            <div>
-                <span className="report-title">Likes:</span>
+            <div className="report-likes-container">
+                <span className="detail-subtitle">Likes: </span>
                 {report.likes}
-            </div>
 
-            <ButtonOptions 
+                <ButtonOptions 
                     currentUser={currentUser}
                     report={report}/>
+            </div>
+
+            
         </section>
     )
 }

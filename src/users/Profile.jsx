@@ -28,10 +28,10 @@ export const Profile = ({ currentUser }) => {
     return (
     
     <section >
-        <div className="app-heading">
+        <div className="profile-heading">
             {profileId === userId ? <h2 className="app-title"> My Profile</h2> : ""}
         </div>
-        <div className="container">
+        <div className="profile-container">
             <h2>{user.name}</h2>
             <div>
                 <span>Email: </span>

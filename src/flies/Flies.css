@@ -1,0 +1,75 @@
+.fly-detail-image {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+    justify-content: center;
+    align-self: center;
+
+}
+
+.fly-detail-image:hover {
+    transform: scale(1.05);
+
+}
+
+.fly-container {
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+    padding: 50px;
+    background-color: whitesmoke;
+
+}
+
+.fly {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: whitesmoke;
+    color: rgb(3, 3, 56);
+    text-decoration: none;
+    border-radius: 1.5rem;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid;
+    margin: 0;
+    align-items: flex-start;
+    box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.3),
+        2px 4px 20px hsla(0, 0%, 0%, 0.2);
+}
+
+.fly:hover {
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+}
+
+.fly * {
+    text-decoration: none;
+}
+
+.fly a {
+    text-decoration: none;
+}
+
+.fly-title {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.fly-subtitle {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    font-size: 16pt;
+    padding: 0.5rem;
+    text-decoration: none;
+}

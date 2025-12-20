@@ -38,9 +38,9 @@ fieldset {
     transform: translate(-46%, -47%);
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.75);
-    padding: 2rem;
+    /* padding: 4rem; */
     width: 40%; /* Use viewport width for responsive sizing */
-    max-height: 77%; /* Limit height */
+    max-height: 80%; /* Limit height */
     border-radius: 8px;
     overflow-y: auto;
     margin: 0; /* Remove margin */

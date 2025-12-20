@@ -48,7 +48,7 @@ export const NewReportForm = ({ currentUser }) => {
     return (
 
         <>
-        <img className="form-background" src="https://i.imgur.com/sR0L3f1.jpeg" alt="background" />
+        {/* <img className="form-background" src="https://i.imgur.com/sR0L3f1.jpeg" alt="background" /> */}
         
         <form className="form-container">
             

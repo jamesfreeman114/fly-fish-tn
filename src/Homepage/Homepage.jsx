@@ -22,7 +22,7 @@ export const Homepage = ( {currentUser}) => {
 
 
     return (
-        <section>
+        <section className="homepage-container">
 
             <HomepageHeading />
 
