@@ -14,6 +14,7 @@ export const ReportDetails = ({ currentUser }) => {
     }, [])
 
     return (
+        <article className="details-container">
         <section className="report-details" id="parchment">
             <div className="detail-title">
                 
@@ -41,5 +42,6 @@ export const ReportDetails = ({ currentUser }) => {
 
             
         </section>
+        </article>
     )
 }

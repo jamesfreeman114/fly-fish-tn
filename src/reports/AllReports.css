@@ -86,7 +86,7 @@ body {
   overflow: hidden;
 }
 
-.report::before {
+/* .report::before {
   content: '';
   position: absolute;
   top: 0;
@@ -97,7 +97,7 @@ body {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
-}
+} */
 
 .report:hover {
   transform: translateY(-4px);
@@ -192,6 +192,8 @@ body {
 
 .report-details {
   display: flex;
+  justify-content: center;
+  align-self: center;
   flex-direction: column;
   background: linear-gradient(135deg, rgb(241, 238, 238), rgb(233, 220, 220));
   backdrop-filter: blur(10px);
@@ -211,6 +213,7 @@ body {
 
 .report-details:hover {
   box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
+  transform: scale(1.1);
 }
 
 
@@ -313,6 +316,10 @@ body {
   color: rgb(10, 35, 5);
 }
 
+.details-container {
+  display: flex;
+}
+
 
    /* #parchment {
   position: absolute;
@@ -328,5 +335,5 @@ body {
   filter: url(#wavy2);
 }
 
-
  */
+

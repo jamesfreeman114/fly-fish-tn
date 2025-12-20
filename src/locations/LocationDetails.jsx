@@ -56,7 +56,8 @@ return (
                 forecast.map((period, index) => (
                     <div key={index} className="weather-report">
                         <h3 className="weather-heading">{period.name}</h3>
-                        <p>{period.temperature}°{period.temperatureUnit} - {period.shortForecast}</p>
+                        <p className="detail-title">{period.shortForecast}</p>
+                        <p className="detail-subtitle">{period.temperature}°{period.temperatureUnit}</p>
                         <p>{period.detailedForecast}</p>
                     </div>
                 ))
