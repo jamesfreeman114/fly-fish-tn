@@ -68,7 +68,8 @@ export const getTheDetailedForecast = async (forecastUrl, numPeriods = 1) => {
       detailedForecast: period.detailedForecast,
       temperature: period.temperature,
       temperatureUnit: period.temperatureUnit,
-      shortForecast: period.shortForecast
+      shortForecast: period.shortForecast,
+      icon: period.icon
     }));
   } catch (error) {
     console.error('Error fetching forecast:', error);

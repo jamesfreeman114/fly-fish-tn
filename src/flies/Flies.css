@@ -73,3 +73,13 @@
     padding: 0.5rem;
     text-decoration: none;
 }
+
+.location-subtitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+    font-size: 16pt;
+    padding: 0.5rem;
+    text-decoration: none;
+}

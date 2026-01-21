@@ -33,7 +33,7 @@ export const Homepage = ( {currentUser}) => {
             </div>
 
             <div>
-                <h2 className="detail-title">Check out some of our members latest Fishing Reports! </h2>
+                <h2 className="title">Check out some of our latest Fishing Reports! </h2>
             </div>
 
             <div className="homepage-reports">

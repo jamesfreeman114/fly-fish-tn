@@ -24,7 +24,6 @@ export const LocationDetails = ({ currentUser }) => {
 
     useEffect(() => {
         if (location.lat && location.lon) {
-            // Get 6 periods (about 3 days worth of forecasts)
             getTheForecastByGPS(location.lat, location.lon, 3).then((forecasts) => setForecast(forecasts))
         }
     }, [location])
@@ -57,8 +56,10 @@ return (
                     <div key={index} className="weather-report">
                         <h3 className="weather-heading">{period.name}</h3>
                         <p className="detail-title">{period.shortForecast}</p>
+                        <img className="weather-image"src={period.icon} alt={period.shortForecast}/>
                         <p className="detail-subtitle">{period.temperature}°{period.temperatureUnit}</p>
                         <p>{period.detailedForecast}</p>
+                        
                     </div>
                 ))
             ) : (
