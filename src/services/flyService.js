@@ -3,5 +3,5 @@ export const getAllFlies = () => {
 }
 
 export const getFlyById = (id) => {
-    return fetch (`http://localhost:8088/flies/${id}`).then(res => res.json())
+    return fetch (`http://localhost:8088/flies/${id}?_expand=location`).then(res => res.json())
 }
