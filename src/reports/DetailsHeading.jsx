@@ -7,7 +7,8 @@ export const DetailsHeading = () => {
                                 <img
                                     className="homepage-header"
                                     src="https://i.imgur.com/WSX1pgj.jpeg"
-                                    alt="image">
+                                    alt="image"
+                                    referrerpolicy="no-referrer">
                 
                                 </img>
                 

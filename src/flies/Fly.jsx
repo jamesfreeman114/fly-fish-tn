@@ -10,6 +10,7 @@ export const Fly = ( {fly}) => {
                 src={fly.imageUrl} 
                 alt={fly.name}
                 className="location-image"
+                referrerpolicy="no-referrer"
             />
             <div className="location-subtitle">{fly.type}</div>
             
