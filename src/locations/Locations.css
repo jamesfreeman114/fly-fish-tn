@@ -134,3 +134,7 @@
     font-size: 40px;
     justify-content: center;
 }
+
+.weather-image {
+    width: 50%
+}

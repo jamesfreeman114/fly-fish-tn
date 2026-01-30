@@ -41,8 +41,11 @@ export const ApplicationViews = () => {
                     </>
                 }>
                 <Route index element={<Homepage currentUser={currentUser} />} />
-                <Route path="reports" element={<><Outlet/></>}>
-                    <Route index element={<><Heading /> <AllReports currentUser={currentUser} /></>} />
+                    <Route  path="reports" 
+                            element={<><Outlet/></>}>
+                        <Route index 
+                                element={<><Heading /> 
+                                        <AllReports currentUser={currentUser} /></>} />
                     <Route path = ":id" element={<><DetailsHeading /> <ReportDetails currentUser={currentUser} /></>} />
                 </Route>
                     <Route path="reports/:id/edit" element={<EditReport currentUser={currentUser} />} />

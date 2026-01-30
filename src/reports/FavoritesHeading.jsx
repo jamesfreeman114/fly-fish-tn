@@ -7,7 +7,8 @@ export const FavoritesHeading = () => {
                                 <img
                                     className="homepage-header"
                                     src="https://i.imgur.com/MrohLjG.jpeg"
-                                    alt="image">
+                                    alt="image"
+                                    referrerpolicy="no-referrer">
                 
                                 </img>
                 

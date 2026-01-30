@@ -39,3 +39,36 @@
   }
 
   
+  .nav-link {
+  display: flex;
+  font-size: 19pt;
+  align-self: flex-end;
+  font-weight: 600;
+  margin: 0;
+  text-decoration: none;
+  position: relative;
+  background: #353232;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #353232;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  transform: translateX(2px);
+}

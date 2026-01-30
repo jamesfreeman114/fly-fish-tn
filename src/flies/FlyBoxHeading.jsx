@@ -7,7 +7,8 @@ export const FlyBoxHeading = () => {
                                 <img
                                     className="homepage-header"
                                     src="https://i.imgur.com/8HCqe5Q.jpeg"
-                                    alt="image">
+                                    alt="image"
+                                    referrerpolicy="no-referrer">
                 
                                 </img>
                 

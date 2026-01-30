@@ -14,6 +14,8 @@ export const Location = ( {location}) => {
                 src={location.imageUrl} 
                 alt={location.name}
                 className="location-image"
+                referrerpolicy="no-referrer"
+
             />
             <div className="location-subtitle">{location.type}</div>
             
